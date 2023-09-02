@@ -47,7 +47,7 @@
 		align-items: flex-start;
 		justify-content: flex-end;
 		flex-direction: column;
-		padding: 16px;
+		padding: 16px 0;
 
 		@media (max-width: 800px) {
 			justify-content: center;

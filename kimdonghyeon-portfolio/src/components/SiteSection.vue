@@ -87,7 +87,7 @@ export default {
 @import '@/scss/index.scss';
 
 .site_wrap {
-	padding: 16px;
+	padding: 16px 0;
 
 	.site_title {
 		position: sticky;

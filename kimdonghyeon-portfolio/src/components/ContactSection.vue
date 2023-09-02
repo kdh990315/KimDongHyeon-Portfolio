@@ -43,7 +43,7 @@
 	.contact_wrap {
 		width: 100%;
 		height: 100%;
-		padding: 16px;
+		padding: 16px 0;
 		display: flex;
 		align-items: flex-start;
 		justify-content: flex-end;
