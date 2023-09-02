@@ -1,0 +1,193 @@
+<template>
+	<section id="intro">
+		<div class="intro_wrap">
+			<h2 class="intro_title">portfolio</h2>
+			<div class="intro_line">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+			<div class="intro_text">
+				<div class="text">
+					<div>dummy text</div>
+					<div>dummy text</div>
+					<div>dummy text</div>
+				</div>
+				<div class="img">
+					<img src="@/assets/portrait.jpg" alt="증명사진">
+				</div>
+			</div>
+			<div class="intro_line bottom">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+		</div>
+	</section>
+</template>
+
+<style lang="scss" scoped>
+@import '@/scss/index.scss';
+
+#intro {
+	height: 100vh;
+
+	.intro_wrap {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		flex-direction: column;
+		padding: 16px;
+
+		@media (max-width: 800px) {
+			justify-content: center;
+		}
+
+		.intro_title {
+			font-size: 10vw;
+			text-transform: uppercase;
+			line-height: 1;
+			font-weight: 800;
+			white-space: nowrap;
+			text-indent: -0.5vw;
+			letter-spacing: -0.3vw;
+
+			@media (max-width: 320px) {
+				display: none;
+			}
+		}
+
+		.intro_text {
+			width: 100%;
+			height: 40vh;
+			background-color: black;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			.text {
+				font-size: 3vw;
+				line-height: 1;
+				font-weight: 900;
+				text-transform: uppercase;
+				text-decoration: underline;
+				text-align: center;
+				position: relative;
+				z-index: 100;
+				transition: all .3s;
+				cursor: all-scroll;
+
+				@media (max-width: 800px) {
+					font-size: 24px;
+				}
+			}
+			.img {
+				@include position-center;
+				width: 30vh;
+				height: 30vh;
+				border-radius: 50%;
+				overflow: hidden;
+				filter: grayscale(100%);
+				transition: all .3s;
+
+				@media (max-width: 320px) {
+					width: 20vh;
+					height: 20vh;
+				}
+
+				img {
+					width: 300px;
+				}
+			}
+
+			&:hover .text {
+				opacity: 0;
+			}
+			&:hover .img {
+				filter: grayscale(0);
+			}
+		}
+
+		.intro_line {
+			width: 100%;
+
+			.line {
+				display: block;
+				width: 100%;
+				height: 1px;
+				background-color: black;
+				margin-bottom: 0.5vw;
+
+				&:nth-child(1){
+                    height: 1px;
+                }
+                &:nth-child(2){
+                    height: 2px;
+                }
+                &:nth-child(3){
+                    height: 5px;
+                }
+                &:nth-child(4){
+                    height: 9px;
+                }
+                &:nth-child(5){
+                    height: 13px;
+                }
+                &:nth-child(6){
+                    height: 17px;
+                }
+                &:nth-child(7){
+                    height: 25px;
+                }
+			}
+
+			&.bottom {
+				.line {
+					margin-top: 0.5vw;
+					margin-bottom: 0;
+					display: none;
+
+					@media (max-width: 800px) {
+						display: block;
+					}
+
+					&:nth-child(1){
+                        height: 25px;
+                    }
+                    &:nth-child(2){
+                        height: 17px;
+                    }
+                    &:nth-child(3){
+                        height: 13px;
+                    }
+                    &:nth-child(4){
+                        height: 9px;
+                    }
+                    &:nth-child(5){
+                        height: 5px;
+                    }
+                    &:nth-child(6){
+                        height: 2px;
+                    }
+                    &:nth-child(7){
+                        height: 1px;
+                    }
+				}
+			}
+		}
+	}
+}
+</style>
